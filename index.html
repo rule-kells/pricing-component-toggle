@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+
+  <main class="flex bg--img">
+
+    <section class="hero">
+      <h1 class="title">Our Pricing</h1>
+      <div class="toggle">
+        <p class="toggle__annually">Annually</p>
+        <input class="toggle__input" type="checkbox" name="toggle" id="toggle" checked>
+        <label class="toggle__label" aria-label="toggle between monthly and annually amounts" for="toggle"></label>
+        <p class="toggle_monthly">Monthly</p>
+      </div>
+    </section>
+
+    <div class="card__wrapper container flex">
+      <section class="card bg--secondary">
+        <h2 class="card__title">Basic</h2>
+        <p class="card__amt  card__amt--monthly">&dollar;19.99</p>
+        <p class="card__amt card__amt--annually">&dollar;199.99</p>
+        <ul class="card__features--list">
+          <li class="card__features--item">500 GB Storage</li>
+          <li class="card__features--item">2 Users Allowed</li>
+          <li class="card__features--item">Send up to 3 GB</li>
+        </ul>
+        <button class="card__btn">Learn More</button>
+      </section>
+      <section class="card bg--primary">
+        <h2 class="card__title">Professional</h2>
+        <p class="card__amt  card__amt--monthly">&dollar;24.99</p>
+        <p class="card__amt card__amt--annually">&dollar;249.99</p>
+        <ul class="card__features--list">
+          <li class="card__features--item">1 TB Storage</li>
+          <li class="card__features--item">5 Users Allowed</li>
+          <li class="card__features--item">Send up to 10 GB</li>
+        </ul>
+        <button class="card__btn">Learn More</button>
+      </section>
+      <section class="card bg--secondary">
+        <h2 class="card__title">Master</h2>
+        <p class="card__amt  card__amt--monthly">&dollar;39.99</p>
+        <p class="card__amt card__amt--annually">&dollar;399.99</p>
+        <ul class="card__features--list">
+          <li class="card__features--item">2 TB Storage</li>
+          <li class="card__features--item">10 Users Allowed</li>
+          <li class="card__features--item">Send up to 20 GB</li>
+        </ul>
+        <button class="card__btn">Learn More</button>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Kellen Ruyle</a>.
+    </p>
+  </footer>
+
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
