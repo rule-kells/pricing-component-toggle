@@ -3,11 +3,9 @@
 
   /* ### Primary */
 
-  --clr-palette-primary-bg: linear-gradient(
-    135.06deg,
-    hsl(236, 72%, 79%) -0.05%,
-    hsl(237, 63%, 64%) 100.05%
-  );
+  --clr-palette-primary-bg: linear-gradient(135.06deg,
+      hsl(236, 72%, 79%) -0.05%,
+      hsl(237, 63%, 64%) 100.05%);
 
   --clr-palette-primary-fg: hsl(237, 63%, 64%);
 
@@ -93,7 +91,7 @@ img {
   display: block;
 }
 
-.flow-content > * + * {
+.flow-content>*+* {
   margin-top: 1rem;
 }
 
@@ -166,6 +164,10 @@ main.flex {
     flex-direction: row;
     align-items: center;
   }
+
+  main.flex {
+    padding: 4.4375rem 0 6.4375rem;
+  }
 }
 
 .hero {
@@ -210,7 +212,7 @@ main.flex {
   transition: all 0.5s;
 }
 
-.toggle__input:checked + .toggle__label::after {
+.toggle__input:checked+.toggle__label::after {
   left: 1.75rem;
 }
 
@@ -221,6 +223,21 @@ main.flex {
 .toggle input {
   position: absolute;
 }
+
+@media (min-width: 56.25em) {
+
+  .toggle__label,
+  .toggle__input {
+    cursor: pointer;
+    transition: opacity .25s ease-in;
+  }
+
+  .toggle__label:hover,
+  .toggle__input:active {
+    opacity: 50%;
+  }
+}
+
 
 /* background utiltiy classes for cards  */
 
@@ -263,6 +280,8 @@ main.flex {
 .bg--primary {
   --fg: var(--clr-palette-primary-fg);
   --bg: var(--clr-palette-secondary-bg);
+  --fg-hvr: var(--clr-palette-secondary-fg);
+  --bg-hvr: var(--clr-palette-secondary-bg);
 
   color: var(--clr-palette-secondary-fg);
   background: var(--clr-palette-primary-bg);
@@ -271,6 +290,8 @@ main.flex {
 .bg--secondary {
   --fg: var(--clr-palette-secondary-fg);
   --bg: var(--clr-palette-primary-bg);
+  --fg-hvr: var(--clr-palette-primary-fg);
+  --bg-hvr: var(--clr-palette-primary-fg);
   --amt: var(--clr-palette-card-tile);
 
   color: var(--clr-palette-card-body);
@@ -346,6 +367,22 @@ main.flex {
   background: var(--bg);
   border-radius: var(--br);
   margin: 2rem auto 0;
+}
+
+@media (min-width: 56.25em) {
+  .card__btn {
+    cursor: pointer;
+    transition: all .25s ease-in;
+
+  }
+
+  .card__btn:hover,
+  .card__btn:active {
+    color: var(--fg);
+    color: var(--fg-hvr);
+    border: 1px solid var(--bg-hvr);
+    background: transparent;
+  }
 }
 
 .attribution {
